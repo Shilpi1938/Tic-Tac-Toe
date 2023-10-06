@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=VT323&family=Varela+Round&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: black;
+    color:white ;
+    height: 30px;
+    font-size:70 ;
+    display: flex;
+    padding: 20px 12px;
+    font-family: 'Varela Round', sans-serif;
+}
+nav ul{
+    list-style-type: none;
+}
+.gamecontainer{
+    background-color:rgb(121, 121, 229) ;
+   
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family:'Ubuntu',sans-serif ;
+    position: relative;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: pink;
+}
+.info{
+    font-weight: bold;
+}
+.gameinfo{
+    padding: 0 34px;
+    font-family: 'Varela Round', sans-serif;
+}
+#img{
+    width: 0;
+   
+    transition: ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    
+    margin: 2px 23px;
+    padding: 1px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: ease-in-out;
+}
+@media screen and (max-width:900px) {
+    .gamecontainer{
+        flex-wrap: wrap;
+        
+    }
+    .gameinfo{
+        margin-top: 34px;
+    }
+    .gameinfo h1{
+        font-size: 1rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
